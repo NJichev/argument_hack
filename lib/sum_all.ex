@@ -1,5 +1,5 @@
 defmodule SumAll do
-  defmacro sum({:all, env, values}) do
+  defmacro sum({:all, _env, values}) do
     res =
       values
       |> Enum.map(&Macro.expand(&1, __CALLER__))
